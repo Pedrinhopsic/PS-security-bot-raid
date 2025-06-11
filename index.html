@@ -1,47 +1,113 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PS SECURITY - Painel</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #0d1117 url('./assets/bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .banner {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 3em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    .card {
+      background: #161b22;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      border: 3px solid #444;
+    }
+    .premium { border-color: gold; }
+    .booster { border-color: hotpink; }
+    .elite {
+      border-image: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta) 1;
+      border-width: 3px;
+      border-style: solid;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.6em;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      padding: 4px 0;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      text-decoration: none;
+      color: white;
+      border-radius: 10px;
+      background: #0052cc;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #003d99;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <div class="background-blur"></div>
-  <div class="container">
-    <header>
-      <img src="assets/banner.jpg" alt="Banner PS SECURITY" class="banner" />
-      <h1>PS SECURITY</h1>
-      <p>Bot de segurança completo para seu servidor Discord</p>
-    </header>
+  <div class="overlay">
+    <img src="./assets/banner.gif" alt="Banner" class="banner" />
+    <h1>🌐 Painel - PS SECURITY</h1>
 
-    <section class="commands">
-      <h2>Comandos</h2>
-      <div class="card">.buscar - Inicia Raid (brincadeira)</div>
-      <div class="card">.adm - Pega adm</div>
-      <div class="card">.admall - Dá adm para todos</div>
-      <div class="card">.foto - Muda nome e imagem do servidor</div>
-    </section>
-
-    <section class="plans">
-      <h2>Planos de Assinatura</h2>
-      <div class="plan elite">
-        <h3>ELITE</h3>
+    <div class="grid">
+      <div class="card">
+        <h2>📜 Comandos</h2>
         <ul>
-          <li>✅ Cargo exclusivo, cargo apoiador</li>
-          <li>✅ Bot elite</li>
-          <li>✅ 4x entrada em sorteio</li>
-          <li>✅ Painel de comandos</li>
-          <li>✅ Acesso antecipado aos comandos</li>
-          <li>✅ Bot de limpar Raid</li>
-          <li>✅ Notificador de servidor</li>
+          <li><strong>.buscar</strong> – Iniciar Raid (brincadeira)</li>
+          <li><strong>.adm</strong> – Pegar adm</li>
+          <li><strong>.admall</strong> – Dar adm para todos</li>
+          <li><strong>.foto</strong> – Mudar nome e foto do servidor</li>
         </ul>
       </div>
-      <div class="plan premium">
-        <h3>PREMIUM</h3>
+      <div class="card premium">
+        <h2>🌟 Plano PREMIUM</h2>
         <ul>
-          <li>✅ Cargo exclusivo, cargo apoiador</li>
+          <li>✅ Cargo exclusivo, apoiador</li>
           <li>✅ Bot Premium</li>
           <li>✅ 3x entrada em sorteio</li>
           <li>❌ Painel de comandos</li>
@@ -50,10 +116,10 @@
           <li>✅ Notificador de servidor</li>
         </ul>
       </div>
-      <div class="plan booster">
-        <h3>BOOSTER</h3>
+      <div class="card booster">
+        <h2>🚀 Plano BOOSTER</h2>
         <ul>
-          <li>✅ Cargo exclusivo, cargo apoiador</li>
+          <li>✅ Cargo exclusivo, apoiador</li>
           <li>✅ Bot Premium</li>
           <li>✅ 2x entrada em sorteio</li>
           <li>❌ Painel de comandos</li>
@@ -62,7 +128,28 @@
           <li>✅ Notificador de servidor</li>
         </ul>
       </div>
-    </section>
+      <div class="card elite">
+        <h2>👑 Plano ELITE</h2>
+        <ul>
+          <li>✅ Cargo exclusivo, apoiador</li>
+          <li>✅ Bot Elite</li>
+          <li>✅ 4x entrada em sorteio</li>
+          <li>✅ Painel de comandos</li>
+          <li>✅ Acesso antecipado aos comandos</li>
+          <li>✅ Bot de limpar Raid</li>
+          <li>✅ Notificador de servidor</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <a href="#">📘 Tutorial</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1377494457481560185&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank">🤖 Adicionar Bot</a>
+    </div>
+
+    <footer>
+      Feito com 💙 por PS SECURITY Team
+    </footer>
   </div>
 </body>
 </html>
