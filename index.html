@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PS SECURITY - Painel</title>
+  <title>PSICO NUKE BOT</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     * {
@@ -18,14 +17,14 @@
       color: white;
     }
     .overlay {
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
       padding: 40px 20px;
       animation: fadeIn 1.2s ease-in;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
     .banner {
@@ -38,8 +37,8 @@
     }
     h1 {
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 3em;
+      margin-bottom: 30px;
+      font-size: 2.8em;
       color: #66ccff;
     }
     .grid {
@@ -47,53 +46,68 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 1200px;
-      margin: 0 auto 30px;
+      margin: 0 auto 40px;
     }
     .card {
       background: #161b22;
       border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
       border: 2px solid #333;
-      animation: fadeIn 1.2s ease-in;
-      transition: transform 0.3s;
+      transition: 0.3s;
+      animation: fadeIn 0.8s ease-in-out;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
+      box-shadow: 0 0 20px #00ffff;
+    }
+    .led {
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, cyan, blue, violet) 1;
     }
     .card h2 {
       margin-top: 0;
-      font-size: 1.5em;
+      font-size: 1.6em;
+      color: #a3d9ff;
     }
     .card ul {
       list-style: none;
       padding: 0;
+      font-size: 1em;
     }
     .card ul li {
-      padding: 6px 0;
+      padding: 5px 0;
+    }
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #90ee90;
     }
     .buttons {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 24px;
-      font-size: 1.1em;
+      padding: 12px 28px;
+      font-size: 1em;
       text-decoration: none;
       color: white;
       border-radius: 10px;
       background: #0052cc;
-      transition: background 0.3s;
+      box-shadow: 0 0 10px #0052cc;
+      transition: 0.3s;
     }
     .buttons a:hover {
       background: #003d99;
+      box-shadow: 0 0 15px #66ccff;
     }
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
+      padding: 30px 10px;
+      font-size: 0.85em;
       color: #aaa;
     }
   </style>
@@ -101,23 +115,67 @@
 <body>
   <div class="overlay">
     <img src="./assets/banner.gif" alt="Banner" class="banner" />
-    <h1>PS SECURITY</h1>
+    <h1>PSICO NUKE BOT</h1>
 
+    <!-- Comandos -->
     <div class="grid">
-      <div class="card">
+      <div class="card led">
         <h2>📜 Comandos do Bot</h2>
         <ul>
-          <li><strong>.raid</strong> – (brincadeira)</li>
-          <li><strong>.adm</strong> – pegar adm</li>
-          <li><strong>.admall</strong> – adm para todos do server</li>
-          <li><strong>.role</strong> – cria 50 cargos</li>
-          <li><strong>.foto</strong> – muda a foto e o nome do server</li>
+          <li><strong>.raid</strong> – cria 500 canais e marca everyone</li>
+          <li><strong>.adm</strong> – Pega adm</li>
+          <li><strong>.admall</strong> – Adm para todos do servidor</li>
+          <li><strong>.role</strong> – Criar 50 cargos</li>
+          <li><strong>.foto</strong> – Mudar nome e foto do servidor</li>
         </ul>
       </div>
     </div>
 
+    <!-- Botão -->
     <div class="buttons">
       <a href="https://discord.com/oauth2/authorize?client_id=1377494457481560185&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank">🤖 Adicionar Bot</a>
+    </div>
+
+    <!-- Planos -->
+    <div class="grid">
+      <div class="card led">
+        <h2>👑 Plano ELITE</h2>
+        <ul>
+          <li>✅ Cargo exclusivo, apoiador</li>
+          <li>✅ Bot Elite</li>
+          <li>✅ 4x entrada em sorteio</li>
+        
+          <li>✅ Acesso antecipado aos comandos</li>
+          <li>✅ Notificador de servidor</li>
+        </ul>
+        <div class="price">💰 R$ 19,00/mês ou R$ 25,00 vitalício</div>
+      </div>
+
+      <div class="card led">
+        <h2>🌟 Plano PREMIUM</h2>
+        <ul>
+          <li>✅ Cargo exclusivo, apoiador</li>
+          <li>✅ Bot Premium</li>
+          <li>✅ 3x entrada em sorteio</li>
+          
+          <li>✅ Acesso antecipado aos comandos</li>
+          <li>✅ Notificador de servidor</li>
+        </ul>
+        <div class="price">💰 R$ 7,00/mês ou R$ 14,00 vitalício</div>
+      </div>
+
+      <div class="card led">
+        <h2>🚀 Plano BOOSTER</h2>
+        <ul>
+          <li>✅ Cargo exclusivo</li>
+          <li>✅ Bot Premium</li>
+          <li>✅ 2x entrada em sorteio</li>
+          
+          <li>❌ Acesso antecipado aos comandos</li>
+          <li>✅ Notificador de servidor</li>
+        </ul>
+        <div class="price">💰 Boost no servidor (dura até o boost sair)</div>
+      </div>
     </div>
 
     <footer>
