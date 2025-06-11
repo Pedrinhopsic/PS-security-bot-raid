@@ -1,0 +1,43 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+}
+.background-blur {
+  background-image: url('assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+.container {
+  padding: 2rem;
+}
+header {
+  text-align: center;
+}
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.commands, .plans {
+  margin-top: 2rem;
+}
+.card, .plan {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.plan h3 {
+  margin-top: 0;
+}
