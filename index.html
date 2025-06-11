@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,74 +22,79 @@
       background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
       padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      animation: fadeIn 1.2s ease-in;
     }
-    h1 {
-      font-size: 3em;
-      color: #66ccff;
-      margin-bottom: 30px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .banner {
       width: 100%;
-      max-width: 800px;
-      margin-bottom: 30px;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      display: block;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
-    .plans {
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3em;
+      color: #66ccff;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      width: 100%;
-      max-width: 1000px;
+      max-width: 1200px;
+      margin: 0 auto 30px;
     }
     .card {
       background: #161b22;
+      border-radius: 15px;
       padding: 20px;
-      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
       border: 2px solid #333;
+      animation: fadeIn 1.2s ease-in;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .card h2 {
       margin-top: 0;
-      color: #90ee90;
+      font-size: 1.5em;
     }
     .card ul {
-      padding: 0;
       list-style: none;
+      padding: 0;
     }
-    .card li {
-      margin: 6px 0;
-    }
-    .price {
-      margin-top: 10px;
-      font-weight: bold;
+    .card ul li {
+      padding: 6px 0;
     }
     .buttons {
-      margin-top: 40px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+      text-align: center;
+      margin-top: 20px;
     }
     .buttons a {
-      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
       padding: 12px 24px;
-      background: #0052cc;
-      border-radius: 8px;
+      font-size: 1.1em;
+      text-decoration: none;
       color: white;
+      border-radius: 10px;
+      background: #0052cc;
       transition: background 0.3s;
     }
     .buttons a:hover {
       background: #003d99;
     }
     footer {
-      margin-top: 40px;
       text-align: center;
-      color: #ccc;
+      padding: 30px;
       font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
@@ -97,48 +103,25 @@
     <img src="./assets/banner.gif" alt="Banner" class="banner" />
     <h1>PS SECURITY</h1>
 
-    <div class="plans">
+    <div class="grid">
       <div class="card">
-        <h2>🌟 Plano PREMIUM</h2>
+        <h2>📜 Comandos do Bot</h2>
         <ul>
-          <li>✅ Cargo exclusivo, apoiador</li>
-          <li>✅ Bot Premium</li>
-          <li>✅ 3x entrada em sorteio</li>
-          <li>✅ Acesso antecipado aos comandos</li>
-          <li>✅ Notificador de servidor</li>
+          <li><strong>.raid</strong> – (brincadeira)</li>
+          <li><strong>.adm</strong> – pegar adm</li>
+          <li><strong>.admall</strong> – adm para todos do server</li>
+          <li><strong>.role</strong> – cria 50 cargos</li>
+          <li><strong>.foto</strong> – muda a foto e o nome do server</li>
         </ul>
-        <div class="price">💰 R$ 7,00/mês ou R$ 14,00 vitalício</div>
-      </div>
-      <div class="card">
-        <h2>🚀 Plano BOOSTER</h2>
-        <ul>
-          <li>✅ Cargo exclusivo, apoiador</li>
-          <li>✅ Bot Premium</li>
-          <li>✅ 2x entrada em sorteio</li>
-          <li>✅ Notificador de servidor</li>
-        </ul>
-        <div class="price">💰 Boost no servidor</div>
-      </div>
-      <div class="card">
-        <h2>👑 Plano ELITE</h2>
-        <ul>
-          <li>✅ Cargo exclusivo, apoiador</li>
-          <li>✅ Bot Elite</li>
-          <li>✅ 4x entrada em sorteio</li>
-          <li>✅ Acesso antecipado aos comandos</li>
-          <li>✅ Notificador de servidor</li>
-        </ul>
-        <div class="price">💰 R$ 19,00/mês ou R$ 25,00 vitalício</div>
       </div>
     </div>
 
     <div class="buttons">
-      <a href="#">📘 Tutorial</a>
       <a href="https://discord.com/oauth2/authorize?client_id=1377494457481560185&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank">🤖 Adicionar Bot</a>
     </div>
 
     <footer>
-      Pagamento via Pix e Giftcard | Feito por PedrinhoPsico e Ayke (7pea)
+      Formas de pagamento: Pix e Giftcard | Feito por PedrinhoPsico e Ayke (7pea)
     </footer>
   </div>
 </body>
