@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NUKE BOT SERVER</title>
+  <title>PS SECURITY - Painel</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #0d1117 url('./assets/bg.png') no-repeat center center fixed;
+      font-family: "Roboto", sans-serif;
+      background: #0a0f1a url('./assets/bg.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
     }
@@ -17,26 +21,32 @@
       background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
       padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .banner {
       width: 100%;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0 auto 30px;
       display: block;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
     h1 {
       text-align: center;
-      margin: 30px 0;
+      margin-bottom: 40px;
       font-size: 3em;
+      color: #66ccff;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 0 auto;
     }
     .card {
       background: #161b22;
@@ -44,6 +54,11 @@
       padding: 20px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
       border: 3px solid #444;
+      animation: fadeIn 1.2s ease-in;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .premium { border-color: gold; }
     .booster { border-color: hotpink; }
@@ -54,14 +69,20 @@
     }
     .card h2 {
       margin-top: 0;
-      font-size: 1.6em;
+      font-size: 1.7em;
     }
     .card ul {
       list-style: none;
       padding: 0;
     }
     .card ul li {
-      padding: 4px 0;
+      padding: 6px 0;
+    }
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #90ee90;
     }
     .buttons {
       text-align: center;
@@ -92,13 +113,13 @@
 <body>
   <div class="overlay">
     <img src="./assets/banner.gif" alt="Banner" class="banner" />
-    <h1>🌐 PSICO COMMUNITY RAID BOT</h1>
+    <h1>🌐 Painel - PS SECURITY</h1>
 
     <div class="grid">
       <div class="card">
         <h2>📜 Comandos</h2>
         <ul>
-          <li><strong>.raid</strong> – Iniciar Raid</li>
+          <li><strong>.buscar</strong> – Iniciar Raid (brincadeira)</li>
           <li><strong>.adm</strong> – Pegar adm</li>
           <li><strong>.admall</strong> – Dar adm para todos</li>
           <li><strong>.foto</strong> – Mudar nome e foto do servidor</li>
@@ -115,6 +136,7 @@
           <li>❌ Bot de limpar Raid</li>
           <li>✅ Notificador de servidor</li>
         </ul>
+        <div class="price">💰 R$ 7,00/mês ou R$ 14,00 vitalício</div>
       </div>
       <div class="card booster">
         <h2>🚀 Plano BOOSTER</h2>
@@ -127,6 +149,7 @@
           <li>❌ Bot de limpar Raid</li>
           <li>✅ Notificador de servidor</li>
         </ul>
+        <div class="price">💰 Boost no servidor (dura até o boost sair)</div>
       </div>
       <div class="card elite">
         <h2>👑 Plano ELITE</h2>
@@ -139,16 +162,18 @@
           <li>✅ Bot de limpar Raid</li>
           <li>✅ Notificador de servidor</li>
         </ul>
+        <div class="price">💰 R$ 19,00/mês ou R$ 25,00 vitalício</div>
       </div>
     </div>
 
     <div class="buttons">
       <a href="#">📘 Tutorial</a>
       <a href="https://discord.com/oauth2/authorize?client_id=1377494457481560185&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank">🤖 Adicionar Bot</a>
+      <a href="https://discord.gg/Vrk3Zvhc8g" target="_blank">🎟️ Abrir Ticket</a>
     </div>
 
     <footer>
-      Feito com 💙 por PSICO COMMUNITY TEAM
+      Formas de pagamento: Pix e Giftcard | Feito com 💙 por PS SECURITY Team
     </footer>
   </div>
 </body>
